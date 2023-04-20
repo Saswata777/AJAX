@@ -16,7 +16,7 @@ function buttonClickHandler(){
 
     //use this for POST request 
     xhr.open("POST", "https://dummy.restapiexample.com/api/v1/create", true)
-    xhr.getResponseHeader('content-type', 'application/x-www-form-urlencoded')
+    xhr.getResponseHeader('content-type', 'application/json')
 
 
 
@@ -41,7 +41,8 @@ function buttonClickHandler(){
 
 
     // send the request
-    xhr.send()
+    params = `{"name":"test","salary":"123","age":"23"}`
+    xhr.send(params)
 
 
     console.log('we succesfully fetch the data')
