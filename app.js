@@ -16,6 +16,9 @@ function buttonClickHandler(){
 
     //use this for POST request 
     xhr.open("POST", "https://dummy.restapiexample.com/api/v1/create", true)
+    xhr.getResponseHeader('content-type', 'application/x-www-form-urlencoded')
+
+
 
     // What to do on progress
     xhr.onprogress = function(){
